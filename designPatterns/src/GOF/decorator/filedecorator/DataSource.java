@@ -9,6 +9,9 @@ package GOF.decorator.filedecorator;
  *
  * @author Computer Arena
  */
-public class NewClass {
-    
+public interface DataSource {
+    void writeData(String data);
+
+    String readData();
 }
+    

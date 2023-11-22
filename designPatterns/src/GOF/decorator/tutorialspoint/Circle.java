@@ -9,10 +9,16 @@ package GOF.decorator.tutorialspoint;
  *
  * @author Computer Arena
  */
-public interface Shape 
-{
-   void draw();
-   double getPrice();
+public class Circle implements Shape {
 
+   @Override
+   public void draw() {
+      System.out.println("Shape: Circle");
+    
+}
+   @Override
+   public double getPrice() {
+        return 11.0;
+   }
     
 }

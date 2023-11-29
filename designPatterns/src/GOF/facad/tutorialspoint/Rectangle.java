@@ -9,6 +9,10 @@ package GOF.facad.tutorialspoint;
  *
  * @author Computer Arena
  */
-public class NewClass {
-    
+public class Rectangle implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Rectangle::draw()");
+   }
 }

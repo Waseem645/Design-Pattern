@@ -9,8 +9,7 @@ package GOF.facad.tutorialspoint;
  *
  * @author Computer Arena
  */
-public class Rectangle implements Shape {
-    
+public class Triangle implements Shape {
    @Override
    public void draw(String... arguments) {
       StringBuilder sb = new StringBuilder();
@@ -18,7 +17,7 @@ public class Rectangle implements Shape {
          sb.append(argument).append(", ");
       }
       sb.setLength(sb.length() - 2);
-      System.out.println("Rectangle::draw() - Arguments: " + sb.toString());
+      System.out.println("Triangle::draw() - Arguments: " + sb.toString());
    }
 }
 

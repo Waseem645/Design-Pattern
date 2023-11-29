@@ -10,5 +10,5 @@ package GOF.facad.tutorialspoint;
  * @author Computer Arena
  */
 public interface Shape {
-   void draw();
+   void draw(String... arguments);
 }

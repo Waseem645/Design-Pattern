@@ -15,6 +15,8 @@ public class FacadePatternDemo {
 
       shapeMaker.drawCircle();
       shapeMaker.drawRectangle();
-      shapeMaker.drawSquare();		
+      shapeMaker.drawSquare();	
+      shapeMaker.drawTriangle();
+      shapeMaker.drawPentagon();
    }
 }

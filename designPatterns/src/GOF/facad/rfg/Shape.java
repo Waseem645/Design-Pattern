@@ -5,10 +5,8 @@
  */
 package GOF.facad.rfg;
 
-/**
- *
- * @author Computer Arena
- */
-public class NewClass {
-    
+
+public interface Shape {
+   void draw(String... color);
 }
+

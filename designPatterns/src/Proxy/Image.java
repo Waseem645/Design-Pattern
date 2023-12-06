@@ -9,6 +9,7 @@ package Proxy;
  *
  * @author Computer Arena
  */
-public class NewClass {
+public interface Image {
+    void display();
     
 }

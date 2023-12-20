@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ChainOfResponsibility;
+package chainpatterndemo;
 
 /**
  *
- * @author Computer Arena
+ * @author fa20-bse-048
  */
 public class ChainPatternDemo {
 	
@@ -16,11 +16,17 @@ public class ChainPatternDemo {
       AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
       AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
       AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
-      AbstractLogger databaseLogger = new DatabaseLogger(AbstractLogger.WARNING);
+      
+      
+      AbstractLogger warningLogger = new DatabaseLogger(AbstractLogger.WARNING);
+//      AbstractLogger infoLogger = new ConsoleLogger(AbstractLogger.INFO);
 
       errorLogger.setNextLogger(fileLogger);
       fileLogger.setNextLogger(consoleLogger);
-      consoleLogger.setNextLogger(databaseLogger);
+      
+      
+      errorLogger.setNextLogger(warningLogger);
+//      warningLogger.setNextLogger(infoLogger);
 
       return errorLogger;	
    }
@@ -32,12 +38,12 @@ public class ChainPatternDemo {
          "This is an information.");
 
       loggerChain.logMessage(AbstractLogger.DEBUG, 
-         "This is a debug level information.");
-
-      loggerChain.logMessage(AbstractLogger.WARNING, 
-         "This is a warning.");
+         "This is an debug level information.");
 
       loggerChain.logMessage(AbstractLogger.ERROR, 
          "This is an error information.");
+      
+      loggerChain.logMessage(AbstractLogger.WARNING, 
+         "This is an error DatabaseLogger.");
    }
 }

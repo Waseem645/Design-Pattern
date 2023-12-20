@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ChainOfResponsibility;
+package chainpatterndemo;
 
 /**
  *
- * @author Computer Arena
+ * @author fa20-bse-048
  */
 public abstract class AbstractLogger {
    public static int INFO = 1;
